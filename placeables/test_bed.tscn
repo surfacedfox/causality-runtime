@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d31v8apdckgb1"]
+
+[ext_resource type="PackedScene" uid="uid://bhygc0gwcq7t3" path="res://assetcontent/primitives/models/test_bed.glb" id="1_x2l18"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ujii"]
+albedo_color = Color(1, 0.541176, 0.188235, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_28lsu"]
+size = Vector3(4.18437, 1.45874, 6.02753)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ly12b"]
+size = Vector3(4.18037, 4, 0.712942)
+
+[node name="test_bed" instance=ExtResource("1_x2l18")]
+
+[node name="SmallPart" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_2ujii")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SmallPart" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103273, -5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SmallPart/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_28lsu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SmallPart/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.30368, -1.32502)
+shape = SubResource("BoxShape3D_ly12b")
+
+[node name="LargePart" parent="." index="1"]
+transform = Transform3D(3.15, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
