@@ -5,6 +5,6 @@ func _ready():
 	loadmodel()
 
 func loadmodel():
-	var modelresource = ModelLoader.loadmdl("Duck.glb").instantiate()
+	var modelresource = ModelLoader.loadmdl("Models/Duck.glb").instantiate()
 	add_child(modelresource)
 	
