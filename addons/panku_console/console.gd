@@ -175,7 +175,7 @@ func add_monitor_window(exp:String, update_period:= 999999.0, position:Vector2 =
 	return new_window
 
 func show_intro():
-	output("[font_size=24][b][color=#478cbf]Causality Engine[/color] ~ [color=#478cbf] %s[/color][/b][/font_size]" % Info.GetDevVer())
+	output("[font_size=24][b][color=#478cbf]Causality Engine[/color] ~ [color=#478cbf] %s[/color][/b][/font_size]" % RuntimeInfo.GetDevVer())
 	output("")
 	output("[url=https://github.com/Ark2000/PankuConsole]Panku Console[/url] adapted for Causality Framework")
 	output("")

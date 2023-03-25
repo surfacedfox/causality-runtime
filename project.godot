@@ -17,10 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Info="*res://scripts/singletons/info.gd"
-RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
+RuntimeInfo="*res://scripts/singletons/runtime_info.gd"
+AudioRuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 ModelLoader="*res://scripts/singletons/model_loader.gd"
 Console="*res://addons/panku_console/console.tscn"
+AudioLoader="*res://scripts/singletons/audio_loader.gd"
 
 [editor_plugins]
 
