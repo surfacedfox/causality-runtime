@@ -1,11 +1,11 @@
 extends Node
+var loadedBanks = []
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func LoadBank(bankPath):
+	var bank : Bank = FMODStudioModule.get_studio_system().load_bank_file(RuntimeInfo.GetGameDirectory() + "Audio/" + bankPath, FMODStudioModule.FMOD_STUDIO_LOAD_BANK_NORMAL, false)
+	loadedBanks.append(bank)
+	return loadedBanks.size()-1
+	
+func UnloadBank(index):
+	var bank : Bank = loadedBanks[index]
+	bank.unload()
