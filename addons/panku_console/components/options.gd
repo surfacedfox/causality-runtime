@@ -1,7 +1,5 @@
 extends Node
 
-@export var export_comment_1 = "You can find config file at " + PankuConsole.Config.FILE_PATH
-
 @export_group("Window Appearance")
 
 @export var blur_effect:bool = true:

@@ -13,20 +13,23 @@ config_version=5
 config/name="Causality-Runtime"
 run/main_scene="res://scenes/runtime/menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
 
 RuntimeInfo="*res://scripts/singletons/runtime_info.gd"
 AudioRuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
+RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 ModelLoader="*res://scripts/singletons/model_loader.gd"
 AudioLoader="*res://scripts/singletons/audio_loader.gd"
 Console="*res://addons/panku_console/console.tscn"
-RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/FMOD/plugin.cfg")
+enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/FMOD/plugin.cfg", "res://addons/clyde/plugin.cfg", "res://addons/ActionIcon/plugin.cfg", "res://addons/gdcastledb/plugin.cfg")
 
 [fmod]
 
