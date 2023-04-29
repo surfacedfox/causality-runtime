@@ -10,9 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Causality-framework"
-run/main_scene="res://scenes/toolscenes/staticobjecteditor.tscn"
+config/name="Causality-Runtime"
+run/main_scene="res://scenes/runtime/menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,12 +23,14 @@ config/icon="res://icon.svg"
 RuntimeInfo="*res://scripts/singletons/runtime_info.gd"
 AudioRuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 ModelLoader="*res://scripts/singletons/model_loader.gd"
-Console="*res://addons/panku_console/console.tscn"
 AudioLoader="*res://scripts/singletons/audio_loader.gd"
+TextureLoader="*res://scripts/singletons/texture_loader.gd"
+Console="*res://addons/panku_console/console.tscn"
+RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/FMOD/plugin.cfg", "res://addons/panku_console/plugin.cfg")
+enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/FMOD/plugin.cfg", "res://addons/clyde/plugin.cfg", "res://addons/ActionIcon/plugin.cfg")
 
 [fmod]
 

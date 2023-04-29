@@ -1,7 +1,7 @@
 extends Node
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func loadmdl(resourcePath : String):
+func LoadModel(resourcePath : String):
 	print("Loading 3d content " + resourcePath + " from " + RuntimeInfo.GetGameDirectory() + "Models/")
 	var state : = GLTFState.new()
 	var gltf : GLTFDocument = GLTFDocument.new()
