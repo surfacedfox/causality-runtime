@@ -66,10 +66,10 @@ var _cached_model: String
 
 func _init():
 	add_to_group(&"action_icons")
-	texture = load("res://addons/ActionIcon/Keyboard/Blank.png")
 	expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	_base_path = RuntimeInfo.GetGameDirectory() + "Sprites/ActionIcons"
+	texture = TextureLoader.LoadTex(_base_path + "/Keyboard/Blank.png")
 
 func _ready() -> void:
 	_use_joypad = not Input.get_connected_joypads().is_empty()
@@ -442,11 +442,11 @@ func get_mouse(button: int) -> Texture:
 func get_image(type: int, image: String) -> Texture2D:
 	match type:
 		KEYBOARD:
-			return load(_base_path + "/Keyboard/" + image + ".png") as Texture
+			return TextureLoader.LoadTex(_base_path + "/Keyboard/" + image + ".png") as Texture
 		MOUSE:
-			return load(_base_path + "/Mouse/" + image + ".png") as Texture
+			return TextureLoader.LoadTex(_base_path + "/Mouse/" + image + ".png") as Texture
 		JOYPAD:
-			return load(_base_path + "/Joypad/" + image + ".png") as Texture
+			return TextureLoader.LoadTex(_base_path + "/Joypad/" + image + ".png") as Texture
 	return null
 
 func on_joy_connection_changed(device: int, connected: bool):
