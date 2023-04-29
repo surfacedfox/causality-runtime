@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://62ypq07qt58u"]
+[gd_scene load_steps=5 format=3 uid="uid://62ypq07qt58u"]
 
 [ext_resource type="Script" path="res://scripts/utility/rotateinplace.gd" id="1_kk2c5"]
+[ext_resource type="Script" path="res://addons/ActionIcon/ActionIcon.gd" id="2_k8jgd"]
 
 [sub_resource type="Environment" id="Environment_ss128"]
 background_energy_multiplier = 0.52
@@ -32,3 +33,18 @@ light_energy = 5.0
 transform = Transform3D(0.810491, -0.167391, 0.561324, 0.0888811, 0.982346, 0.164608, -0.578969, -0.0835224, 0.81106, 2.67251, 0.271219, 2.68241)
 light_color = Color(1, 0, 0.435294, 1)
 light_energy = 10.0
+
+[node name="ActionIcon" type="TextureRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_k8jgd")
+action_name = &"ui_accept"

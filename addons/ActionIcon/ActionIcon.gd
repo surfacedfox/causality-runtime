@@ -69,7 +69,7 @@ func _init():
 	texture = load("res://addons/ActionIcon/Keyboard/Blank.png")
 	expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	_base_path = get_script().resource_path.get_base_dir()
+	_base_path = RuntimeInfo.GetGameDirectory() + "Sprites/ActionIcons"
 
 func _ready() -> void:
 	_use_joypad = not Input.get_connected_joypads().is_empty()
