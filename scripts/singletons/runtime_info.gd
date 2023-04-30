@@ -7,12 +7,12 @@ var scene : PackedScene
 var instance : Node
 
 func _ready():
-	print("Initializing game systems...")
-	scene = load("res://scenes/runtime/initloading.tscn")
-	instance = scene.instantiate()
-	add_child(instance)
 	if OS.has_feature("editor") == false:
 		gamedirectory = OS.get_executable_path().get_base_dir() + "/GameData/"
+		print("Initializing game systems...")
+		scene = load("res://scenes/runtime/initloading.tscn")
+		instance = scene.instantiate()
+		add_child(instance)
 
 func CompletedInit():
 	print("Deleting initialization loading screen...")
@@ -28,4 +28,3 @@ func GetGameVer():
 func GetGameDirectory():
 	print("The game directory is " + gamedirectory)
 	return gamedirectory
-		
